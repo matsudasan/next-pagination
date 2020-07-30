@@ -12,31 +12,6 @@ export default function Pagination({ postsPerPage, totalPosts, paginate, current
         Router.push(`/?page=${number}`)
         paginate(number)
 
-        // console.log(click)
-        //console.log(e.target.className)
-        //item.current.classList.add("color")
-        //console.log("クラスリスト:"+item.current.classList)
-        //console.log("クラスネーム:"+item.current.className)
-        //console.log("itemがあるかどうか:"+item.current.className.includes("item"))
-        //console.log(!item.current.contains(e.target) || item.current.className.includes("item"))
-        //console.log("範囲内をクリック"+item.current.contains(e.target))
-        //console.log("範囲外をクリック"+!item.current.contains(e.target))
-
-        /*if (item.current.contains(e.target)) {
-            console.log("付与?")
-
-            if (item.current.className.includes("color")) {
-                console.log("はずす確定")
-                return item.current.classList.remove("color")
-            } else {
-                console.log("付与確定")
-                return item.current.classList.add("color")
-            }
-
-        }else{
-            console.log("画面外")
-        }*/
-
     }
     return (
         <>
