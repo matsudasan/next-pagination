@@ -6,23 +6,16 @@ import Post from '../components/Post';
 
 export default function Home({ posts }) {
 
-  //現在のページ
   const [currentPage, setCurrentPage] = useState(1);
 
-  //ページごとの投稿数
   const [postsPerPage] = useState(10);
 
-  // Get current posts
-  //ページの最後の投稿　1ページ目の場合　1×10
   const indexOfLastPost = currentPage * postsPerPage;
 
-  //ページ最初の投稿　1ページ目の場合　10-10
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
-  //ページの投稿内容
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
