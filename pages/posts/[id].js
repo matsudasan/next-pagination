@@ -15,7 +15,7 @@ export default function Post({ post }) {
     )
 }
 
-//SSGするルート
+
 export async function getStaticPaths() {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const posts = await res.json();
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     return { paths, fallback: false };
 }
 
-//SSGしたルートに入る内容
+
 export async function getStaticProps({ params }) {
     console.log(params)
     const id = params.id
